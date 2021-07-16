@@ -1,0 +1,13 @@
+.ltx-wc-order
+  p.woocommerce-result-count
+    | Showing 1–9 of 33 results
+  form.woocommerce-ordering(method='get')
+    .select-wrap
+      select.orderby(name='orderby' aria-label='Shop order')
+        option(value='menu_order' selected='selected') Default sorting
+        option(value='popularity') Sort by popularity
+        option(value='rating') Sort by average rating
+        option(value='date') Sort by latest
+        option(value='price') Sort by price: low to high
+        option(value='price-desc') Sort by price: high to low
+    input(type='hidden' name='paged' value='1')

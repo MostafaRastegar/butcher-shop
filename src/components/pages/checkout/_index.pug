@@ -1,0 +1,237 @@
+.page-template-default.page.page-id-616
+  .container.main-wrapper
+    .inner-page.margin-default
+      .row.centered
+        .col-xl-12.col-xs-12.text-page
+          article#post-616.post-616.page.type-page.status-publish.hentry
+            #entry-div.entry-content.clearfix
+              .woocommerce
+              
+                .woocommerce-notices-wrapper
+                .woocommerce-form-login-toggle
+                  .woocommerce-info
+                    | Returning customer? 
+                    a.showlogin(href='#') Click here to login
+             
+                form.woocommerce-form.woocommerce-form-login.login(method='post' style='display:block;')
+                  p
+                    | If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.
+                  p.form-row.form-row-first
+                    label(for='username')
+                      | Username or email 
+                      span.required *
+                    input#username.input-text(type='text' name='username' autocomplete='username')
+                  p.form-row.form-row-last
+                    label(for='password')
+                      | Password 
+                      span.required *
+                    input#password.input-text(type='password' name='password' autocomplete='current-password')
+                  .clear
+                  p.form-row
+                    label.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme
+                      input#rememberme.woocommerce-form__input.woocommerce-form__input-checkbox(name='rememberme' type='checkbox' value='forever')
+                      span Remember me
+                    input#woocommerce-login-nonce(type='hidden' name='woocommerce-login-nonce' value='0b87d063c3')
+                    input(type='hidden' name='_wp_http_referer' value='/checkout/')
+                    input(type='hidden' name='redirect' value='http://bubulla.like-themes.com/checkout/')
+                    button.woocommerce-button.button.woocommerce-form-login__submit(type='submit' name='login' value='Login') Login
+                  p.lost_password
+                    a(href='http://bubulla.like-themes.com/my-account/lost-password/') Lost your password?
+                  .clear
+                .woocommerce-form-coupon-toggle
+                  .woocommerce-info
+                    | Have a coupon? 
+                    a.showcoupon(href='#') Click here to enter your code
+                form.checkout_coupon.woocommerce-form-coupon(method='post' style='display:block')
+                  p If you have a coupon code, please apply it below.
+                  p.form-row.form-row-first
+                    input#coupon_code.input-text(type='text' name='coupon_code' placeholder='Coupon code' value='')
+                  p.form-row.form-row-last
+                    span.ltx-btn-wrap.ltx-btn-wrap-main.ltx-btn-wrap-hover-black
+                      button.btn.btn-xs.btn-main.color-hover-black(type='submit' name='apply_coupon' value='Apply coupon')
+                        | Apply coupon
+                        span
+                  .clear
+             
+                .woocommerce-notices-wrapper
+                form.checkout.woocommerce-checkout(name='checkout' method='post' action='http://bubulla.like-themes.com/checkout/' enctype='multipart/form-data')
+                  #customer_details.col2-set
+                    .col-1
+                      .woocommerce-billing-fields
+                        h3 Billing details
+                        .woocommerce-billing-fields__field-wrapper
+                          p#billing_first_name_field.form-row.form-row-first.validate-required(data-priority='10')
+                            label(for='billing_first_name')
+                              | First name 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_first_name.input-text(type='text' name='billing_first_name' placeholder='' value='dasdsa' autocomplete='given-name')
+                          p#billing_last_name_field.form-row.form-row-last.validate-required(data-priority='20')
+                            label(for='billing_last_name')
+                              | Last name 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_last_name.input-text(type='text' name='billing_last_name' placeholder='' value='' autocomplete='family-name')
+                          p#billing_company_field.form-row.form-row-wide(data-priority='30')
+                            label(for='billing_company')
+                              | Company name 
+                              span.optional (optional)
+                            span.woocommerce-input-wrapper
+                              input#billing_company.input-text(type='text' name='billing_company' placeholder='' value='' autocomplete='organization')
+                          p#billing_country_field.form-row.form-row-wide.address-field.update_totals_on_change.validate-required(data-priority='40')
+                            label(for='billing_country')
+                              | Country 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              select#billing_country.country_to_state.country_select(name='billing_country' autocomplete='country')
+                                option(value='') Select a country…
+                                option(value='AX') Åland Islands
+                            
+                              noscript
+                                button(type='submit' name='woocommerce_checkout_update_totals' value='Update country') Update country
+                          p#billing_address_1_field.form-row.form-row-wide.address-field.validate-required(data-priority='50')
+                            label(for='billing_address_1')
+                              | Street address 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_address_1.input-text(type='text' name='billing_address_1' placeholder='House number and street name' value='' autocomplete='address-line1')
+                          p#billing_address_2_field.form-row.form-row-wide.address-field(data-priority='60')
+                            label.screen-reader-text(for='billing_address_2')
+                              | Apartment, suite, unit etc. (optional) 
+                              span.optional (optional)
+                            span.woocommerce-input-wrapper
+                              input#billing_address_2.input-text(type='text' name='billing_address_2' placeholder='Apartment, suite, unit etc. (optional)' value='' autocomplete='address-line2')
+                          p#billing_city_field.form-row.form-row-wide.address-field.validate-required(data-priority='70')
+                            label(for='billing_city')
+                              | Town / City 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_city.input-text(type='text' name='billing_city' placeholder='' value='' autocomplete='address-level2')
+                          p#billing_state_field.form-row.form-row-wide.address-field.validate-required.validate-state(data-priority='80')
+                            label(for='billing_state')
+                              | State / County 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              select#billing_state.state_select(name='billing_state' autocomplete='address-level1' data-placeholder='Select an option…' data-input-classes='')
+                                option(value='') Select an option…
+                                option(value='KHZ') Khuzestan  (خوزستان)
+                                option(value='THR') Tehran  (تهران)
+        
+                          p#billing_postcode_field.form-row.form-row-wide.address-field.validate-required.validate-postcode(data-priority='90')
+                            label(for='billing_postcode')
+                              | Postcode / ZIP 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_postcode.input-text(type='text' name='billing_postcode' placeholder='' value='' autocomplete='postal-code')
+                          p#billing_phone_field.form-row.form-row-wide.validate-required.validate-phone(data-priority='100')
+                            label(for='billing_phone')
+                              | Phone 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_phone.input-text(type='tel' name='billing_phone' placeholder='' value='' autocomplete='tel')
+                          p#billing_email_field.form-row.form-row-wide.validate-required.validate-email(data-priority='110')
+                            label(for='billing_email')
+                              | Email address 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#billing_email.input-text(type='email' name='billing_email' placeholder='' value='' autocomplete='email username')
+                      .woocommerce-account-fields
+                        p.form-row.form-row-wide.create-account
+                          label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
+                            input#createaccount.woocommerce-form__input.woocommerce-form__input-checkbox.input-checkbox(type='checkbox' name='createaccount' value='1')
+                            span Create an account?
+                        .create-account
+                          p#account_password_field.form-row.validate-required(data-priority='')
+                            label(for='account_password')
+                              | Create account password 
+                              abbr.required(title='required') *
+                            span.woocommerce-input-wrapper
+                              input#account_password.input-text(type='password' name='account_password' placeholder='Password' value='')
+                          .clear
+                    .col-2
+                      .woocommerce-shipping-fields
+                      .woocommerce-additional-fields
+                        h3 Additional information
+                        .woocommerce-additional-fields__field-wrapper
+                          p#order_comments_field.form-row.notes(data-priority='')
+                            label(for='order_comments')
+                              | Order notes 
+                              span.optional (optional)
+                            span.woocommerce-input-wrapper
+                              textarea#order_comments.input-text(name='order_comments' placeholder='Notes about your order, e.g. special notes for delivery.' rows='2' cols='5')
+                  h3#order_review_heading Your order
+                  #order_review.woocommerce-checkout-review-order
+                    table.shop_table.woocommerce-checkout-review-order-table
+                      thead
+                        tr
+                          th.product-name Product
+                          th.product-total Subtotal
+                      tbody
+                        tr.cart_item
+                          td.product-name
+                            | Beef with mint 						 
+                            strong.product-quantity × 1
+                          td.product-total
+                            span.woocommerce-Price-amount.amount
+                              span.woocommerce-Price-currencySymbol $
+                              | 49.99
+                      tfoot
+                        tr.cart-subtotal
+                          th Subtotal
+                          td
+                            span.woocommerce-Price-amount.amount
+                              span.woocommerce-Price-currencySymbol $
+                              | 49.99
+                        tr.order-total
+                          th Total
+                          td
+                            strong
+                              span.woocommerce-Price-amount.amount
+                                span.woocommerce-Price-currencySymbol $
+                                | 49.99
+                    #payment.woocommerce-checkout-payment
+                      ul.wc_payment_methods.payment_methods.methods
+                        li.wc_payment_method.payment_method_bacs
+                          input#payment_method_bacs.input-radio(type='radio' name='payment_method' value='bacs' checked='checked' data-order_button_text='')
+                          label(for='payment_method_bacs')
+                            | Direct bank transfer
+                          .payment_box.payment_method_bacs
+                            p
+                              | Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                        li.wc_payment_method.payment_method_cheque
+                          input#payment_method_cheque.input-radio(type='radio' name='payment_method' value='cheque' data-order_button_text='')
+                          label(for='payment_method_cheque')
+                            | Check payments
+                          .payment_box.payment_method_cheque(style='display:none;')
+                            p
+                              | Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                        li.wc_payment_method.payment_method_cod
+                          input#payment_method_cod.input-radio(type='radio' name='payment_method' value='cod' data-order_button_text='')
+                          label(for='payment_method_cod')
+                            | Cash on delivery
+                          .payment_box.payment_method_cod(style='display:none;')
+                            p Pay with cash upon delivery.
+                        li.wc_payment_method.payment_method_paypal
+                          input#payment_method_paypal.input-radio(type='radio' name='payment_method' value='paypal' data-order_button_text='Proceed to PayPal')
+                          label(for='payment_method_paypal')
+                            | PayPal 
+                            img(src='https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg' alt='PayPal acceptance mark')
+                            a.about_paypal(href='https://www.paypal.com/us/webapps/mpp/paypal-popup' onclick="javascript:window.open('https://www.paypal.com/us/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;") What is PayPal?
+                          .payment_box.payment_method_paypal(style='display:none;')
+                            p
+                              | Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.
+                      .form-row.place-order
+                        noscript
+                          | Since your browser does not support JavaScript, or it is disabled, please ensure you click the 
+                          em Update Totals
+                          |  button before placing your order. You may be charged more than the amount stated above if you fail to do so.			
+                          br
+                          button.button.alt(type='submit' name='woocommerce_checkout_update_totals' value='Update totals') Update totals
+                        .woocommerce-terms-and-conditions-wrapper
+                          .woocommerce-privacy-policy-text
+                        button#place_order.button.alt(type='submit' name='woocommerce_checkout_place_order' value='Place order' data-value='Place order') Place order
+                        input#woocommerce-process-checkout-nonce(type='hidden' name='woocommerce-process-checkout-nonce' value='d96f1a8e45')
+                        input(type='hidden' name='_wp_http_referer' value='/checkout/')
+
+  
+  

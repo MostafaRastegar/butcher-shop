@@ -1,0 +1,68 @@
+.woocommerce-tabs.wc-tabs-wrapper
+  ul.tabs.wc-tabs(role='tablist')
+    li#tab-title-description.description_tab.active(role='tab' aria-controls='tab-description')
+      a(href='#tab-description')
+        | Description
+    li#tab-title-reviews.reviews_tab(role='tab' aria-controls='tab-reviews')
+      a(href='#tab-reviews')
+        | Reviews (0)
+  #tab-description.woocommerce-Tabs-panel.woocommerce-Tabs-panel--description.panel.entry-content.wc-tab(role='tabpanel' aria-labelledby='tab-title-description' style='display: block;')
+    h2 Description
+    p
+      | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+  #tab-reviews.woocommerce-Tabs-panel.woocommerce-Tabs-panel--reviews.panel.entry-content.wc-tab(role='tabpanel' aria-labelledby='tab-title-reviews' style='display: none;')
+    #reviews.woocommerce-Reviews
+      #comments
+        h2.woocommerce-Reviews-title
+          | Reviews
+        p.woocommerce-noreviews There are no reviews yet.
+      #review_form_wrapper
+        #review_form
+          #respond.comment-respond
+            span#reply-title.comment-reply-title
+              | Be the first to review “Beef with mint” 
+              small
+                a#cancel-comment-reply-link(rel='nofollow' href='/product/beef-with-mint/#respond' style='display:none;') Cancel reply
+            form#commentform.comment-form(action='http://bubulla.like-themes.com/wp-comments-post.php' method='post' novalidate='')
+              p.comment-notes
+                span#email-notes Your email address will not be published.
+                |  Required fields are marked 
+                span.required *
+              .comment-form-rating
+                label(for='rating') Your rating
+                p.stars
+                  span
+                    a.star-1(href='#') 1
+                    a.star-2(href='#') 2
+                    a.star-3(href='#') 3
+                    a.star-4(href='#') 4
+                    a.star-5(href='#') 5
+                select#rating(name='rating' required='' style='display: none;')
+                  option(value='') Rate…
+                  option(value='5') Perfect
+                  option(value='4') Good
+                  option(value='3') Average
+                  option(value='2') Not that bad
+                  option(value='1') Very poor
+              p.comment-form-comment
+                label(for='comment')
+                  | Your review 
+                  span.required *
+                textarea#comment(name='comment' cols='45' rows='8' required='')
+              p.comment-form-author
+                label(for='author')
+                  | Name 
+                  span.required *
+                input#author(name='author' type='text' value='' size='30' required='')
+              p.comment-form-email
+                label(for='email')
+                  | Email 
+                  span.required *
+                input#email(name='email' type='email' value='' size='30' required='')
+              p.form-submit
+                span.ltx-btn-wrap
+                  input#submit.submit.btn.btn-xs(name='submit' type='submit' value='Submit')
+                input#comment_post_ID(type='hidden' name='comment_post_ID' value='11062')
+                input#comment_parent(type='hidden' name='comment_parent' value='0')
+          // #respond
+      .clear

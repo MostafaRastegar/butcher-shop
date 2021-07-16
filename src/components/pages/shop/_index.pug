@@ -1,0 +1,24 @@
+.archiv.post-type-archive.post-type-archive-product 
+  .container.main-wrapper
+    .inner-page.margin-default
+      .row
+        .col-xl-9.col-xl-push-3.col-lg-8.col-lg-push-4.col-md-12.text-page.products-column-with-sidebar.matchHeight
+          header.woocommerce-products-header
+          .woocommerce-notices-wrapper
+          include ../../common/showResult
+
+          ul.products.columns-3
+            include ../../common/productCard
+            
+          include ../../common/pagination
+
+        .col-xl-3.col-xl-pull-9.col-lg-4.col-lg-pull-8.col-md-12.div-sidebar
+          #content-sidebar.content-sidebar.woocommerce-sidebar.widget-area(role='complementary')
+            include ../../common/widgetProductSearch
+            include ../../common/widgetShopingCard
+            include ../../common/widgetProductCategory
+            include ../../common/widgetProductFilterPrice
+            include ../../common/widgetProductTagCloud
+
+
+

@@ -1,0 +1,25 @@
+aside#woocommerce_price_filter-5.widget.woocommerce.widget_price_filter
+  .ltx-sidebar-header
+    h3.header-widget
+      span.widget-icon
+      | Filter
+      span.last.widget-icon
+  form(method='get' action='http://bubulla.like-themes.com/shop/')
+    .price_slider_wrapper
+      .price_slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(style='')
+        .ui-slider-range.ui-widget-header.ui-corner-all(style='left: 0%; width: 100%;')
+        span.ui-slider-handle.ui-state-default.ui-corner-all(tabindex='0' style='left: 0%;')
+        span.ui-slider-handle.ui-state-default.ui-corner-all(tabindex='0' style='left: 100%;')
+      .price_slider_amount(data-step='10')
+        input#min_price(type='text' name='min_price' value='0' data-min='0' placeholder='Min price' style='display: none;')
+        input#max_price(type='text' name='max_price' value='100' data-max='100' placeholder='Max price' style='display: none;')
+        span.ltx-btn-wrap.ltx-btn-wrap-main.ltx-btn-wrap-hover-black
+          button.btn.btn-xs.btn-main.color-hover-black(type='submit')
+            | Filter
+            span
+        .price_label(style='')
+          | Price: 
+          span.from $0
+          |  — 
+          span.to $100
+        .clear
