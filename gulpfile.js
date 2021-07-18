@@ -57,6 +57,18 @@ gulp.task("pug", function buildHTML() {
     .pipe(gulp.dest("./public"))
     .pipe(connect.reload());
 });
+gulp.task("renderHtml", function buildHTML() {
+  return gulp
+    .src("./src/**/*.pug")
+    .pipe(
+      pug({
+        pretty: true,
+      })
+    )
+    .on("error", swallowError)
+    .pipe(gulp.dest("./public"))
+    .pipe(connect.reload());
+});
 
 gulp.task("connect", () => {
   connect.server({
