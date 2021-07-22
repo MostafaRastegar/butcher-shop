@@ -1,0 +1,37 @@
+#nav-wrapper.navbar-layout-desktop-center-transparent
+  nav.navbar(data-spy='' data-offset-top='0')
+    .container
+      .ltx-navbar-social
+        .ltx-social.ltx-nav-second.ltx-type-
+          span.header
+            span Follow us
+          ul
+            li
+              a(href='#' target='_self')
+                span.fa.fa-twitter
+            li
+              a(href='#' target='_self')
+                span.fa.fa-facebook-f
+            li
+              a(href='#' target='_self')
+                span.fa.fa-instagram
+            li
+              a(href='#' target='_self')
+                span.fa.fa-youtube
+      .navbar-logo
+        a.logo(href='http://bubulla.like-themes.com/')
+          img(src='//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_1x-1.png' alt='Bubulla' srcset='//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_1x-1.png 1x,//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_2x-1.png 2x')
+      include ../menu/_shoping-menu.pug
+      #navbar.navbar-collapse.collapse(data-mobile-screen-width='1200')
+        .toggle-wrap
+          a.logo(href='http://bubulla.like-themes.com/')
+            img(src='//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_1x-1.png' alt='Bubulla' srcset='//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_1x-1.png 1x,//bubulla.like-themes.com/wp-content/uploads/2018/02/logo_bubulla_2x-1.png 2x')
+          button.navbar-toggle.collapsed(type='button')
+            span.close ×
+          .clearfix
+        include ../menu/_main-menu.pug
+      .navbar-controls
+        button.navbar-toggle.collapsed(type='button')
+          span.icon-bar.top-bar
+          span.icon-bar.middle-bar
+          span.icon-bar.bottom-bar
