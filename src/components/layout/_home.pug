@@ -8,7 +8,7 @@ meta(name='format-detection' content='telephone=no')
 title Bubulla – Meat Store WordPress Theme
 style(type='text/css' data-type='vc_shortcodes-custom-css').
   .vc_custom_1574622672299 {
-  background-image: url(wp-content/uploads/2018/02/skills_parallax.jpg?id=11325) !important;
+  background-image: url(./assets/uploads/2018/02/skills_parallax.jpg?id=11325) !important;
   }
   .vc_custom_1577038215740 {
   background-position: center !important;
@@ -16,7 +16,7 @@ style(type='text/css' data-type='vc_shortcodes-custom-css').
   background-size: contain !important;
   }
   .vc_custom_1574869749050 {
-  background-image: url(wp-content/uploads/2018/02/testimonials_parallax.jpg?id=11327) !important;
+  background-image: url(./assets/uploads/2018/02/testimonials_parallax.jpg?id=11327) !important;
   }
   .vc_custom_1577029878028 {
   border-bottom-width: 3px !important;
@@ -28,19 +28,19 @@ style(type='text/css' data-type='vc_shortcodes-custom-css').
   }
   .vc_custom_1574623635792 {
   margin-top: -90px !important;
-  background-image: url(wp-content/uploads/2019/11/meat_BG_lines_big-02.png?id=11407) !important;
+  background-image: url(./assets/uploads/2019/11/meat_BG_lines_big-02.png?id=11407) !important;
   }
   .vc_custom_1577112637628 {
-  background-image: url(wp-content/uploads/2018/02/butcher.jpg?id=11324) !important;
+  background-image: url(./assets/uploads/2018/02/butcher.jpg?id=11324) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   }
   .vc_custom_1574702720696 {
-  background-image: url(wp-content/uploads/2019/11/meat_BG_lines_big-005.png?id=11438) !important;
+  background-image: url(./assets/uploads/2019/11/meat_BG_lines_big-005.png?id=11438) !important;
   }
   .vc_custom_1577038285278 {
-  background-image: url(wp-content/uploads/2019/12/price-bg.png?id=11801) !important;
+  background-image: url(./assets/uploads/2019/12/price-bg.png?id=11801) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
@@ -91,7 +91,7 @@ meta(name='generator' content='Powered by WPBakery Page Builder - drag and drop 
 link(rel='icon' href='./assets/uploads/2018/02/cropped-favicon-48x48.png' sizes='32x32')
 link(rel='icon' href='./assets/uploads/2018/02/cropped-favicon-250x250.png' sizes='192x192')
 link(rel='apple-touch-icon-precomposed' href='./assets/uploads/2018/02/cropped-favicon-250x250.png')
-meta(name='msapplication-TileImage' content='wp-content/uploads/2018/02/cropped-favicon-275x275.png')
+meta(name='msapplication-TileImage' content='./assets/uploads/2018/02/cropped-favicon-275x275.png')
 noscript
   style.
     .wpb_animate_when_almost_visible {
@@ -102,11 +102,12 @@ body.theme-bubulla.woocommerce-no-js.tribe-no-js.full-width.ltx-color-scheme-def
   #ltx-preloader(data-loader='Loading...')
   .ltx-content-wrapper.desktop-center-transparent
     .header-wrapper.header-h1.header-parallax.wrapper-navbar-layout-desktop-center-transparent.ltx-pageheader-disabled
-      include ../menu/_home.pug
+      block mainMenu
+
     .home.page-template-default.page.page-id-7925
       .container.main-wrapper
         // Content
-        include ../pages/home/_index.pug
+        block body
   block footer
 
   link#zoomslider-css(rel='stylesheet' href='./assets/plugins/lt-ext/shortcodes/zoom_slider/zoom-slider.css?ver=1577374824' type='text/css' media='all')
@@ -185,7 +186,7 @@ body.theme-bubulla.woocommerce-no-js.tribe-no-js.full-width.ltx-color-scheme-def
     var woocommerce_price_slider_params = {"currency_format_num_decimals":"0","currency_format_symbol":"$","currency_format_decimal_sep":".","currency_format_thousand_sep":",","currency_format":"%s%v"};
     /* ]]> */
 
-  script(type='text/javascript' src='./assets/plugins/woocommerce/assets/js/frontend/price-slider.min.js')
+  //- script(type='text/javascript' src='./assets/plugins/woocommerce/assets/js/frontend/price-slider.min.js')
 
   script(type='text/javascript' src='./assets/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js')
   script(type='text/javascript' src='./assets/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js')
