@@ -59,7 +59,7 @@ gulp.task("pug", function buildHTML() {
 });
 gulp.task("renderHtml", function buildHTML() {
   return gulp
-    .src("./src/**/*.pug")
+    .src("./src/components/**/*.pug")
     .pipe(
       pug({
         pretty: true,
@@ -81,10 +81,18 @@ gulp.task("connect", () => {
 gulp.task("watch", () => {
   gulp.watch("./src/scss/**/*.scss", ["stylesKit"]);
   gulp.watch("./src/components/**/*.scss", ["stylesComponent"]);
-  gulp.watch("./src/**/*.pug", ["pug"]);
+  gulp.watch("./src/containers/*.pug", ["pug"]);
+  gulp.watch("./src/components/**/*.pug", ["renderHtml"]);
 });
 
-gulp.task("start", ["stylesKit", "stylesComponent", "pug", "connect", "watch"]);
+gulp.task("start", [
+  "stylesKit",
+  "stylesComponent",
+  "pug",
+  "renderHtml",
+  "connect",
+  "watch",
+]);
 
 // gulp.task("js", () => {
 //   gulp

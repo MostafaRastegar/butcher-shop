@@ -1,0 +1,14 @@
+
+extend ../components/layout/_index.pug
+block siteinfo
+  - var title = "contacts"
+block header
+  include ../components/header/_index.pug
+block mainMenu
+  include ../components/menu/_index.pug
+block body
+  include ../components/pages/contacts/_index.pug
+block footer
+  include ../components/footer/_index.pug
+  script(type='text/javascript' src='./assets/plugins/js_composer/assets/js/map-style.js')
+  script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3&#038;key=AIzaSyASypby3_5qo_HURUtm8y1fClkh5JfDXso&#038;ver=5.3.8')

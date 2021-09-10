@@ -1,0 +1,26 @@
+.container.main-wrapper
+  .inner-page.margin-default
+    .vc_row.wpb_row.vc_row-fluid(data-vc-full-width='true' data-vc-full-width-init='false')
+      .wpb_column.vc_column_container.vc_col-sm-12
+        .vc_column-inner
+          include _top-clients-reviews.pug
+  
+    .vc_row-full-width.vc_clearfix
+    .vc_row.wpb_row.vc_row-fluid.bg-color-gray(data-vc-full-width='true' data-vc-full-width-init='false')
+      .wpb_column.vc_column_container.vc_col-sm-12
+        .vc_column-inner
+          include _leave-your-review.pug
+
+  
+    .vc_row-full-width.vc_clearfix
+      include _what-our-clients-say.pug
+
+
+    .clearfix
+    nav.navigation.paging-navigation
+      h3.screen-reader-text Posts navigation
+      .pagination.loop-pagination
+        a.prev.page-numbers.disabled(href='#')
+        span.page-numbers.current 1
+        a.page-numbers(href='http://bubulla.like-themes.com/testimonials/page/2/') 2
+        a.next.page-numbers(href='http://bubulla.like-themes.com/testimonials/page/2/')
